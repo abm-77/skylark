@@ -1,0 +1,32 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1744176816" />
+    <testcase name="test_alu_addition" classname="tb.sky_alu_tb" file="/home/brysonm/dev/skylark/rtl/tb/sky_alu_tb.py" lineno="30" time="8.130073547363281e-05" sim_time_ns="1000000000" ratio_time="12300011730205.28">
+      <failure message="Test failed with RANDOM_SEED=1744176816" />
+    </testcase>
+    <testcase name="test_alu_subtraction" classname="tb.sky_alu_tb" file="/home/brysonm/dev/skylark/rtl/tb/sky_alu_tb.py" lineno="49" time="3.075599670410156e-05" sim_time_ns="1000000000" ratio_time="32513984496124.03">
+      <failure message="Test failed with RANDOM_SEED=1744176816" />
+    </testcase>
+    <testcase name="test_alu_logical_ops" classname="tb.sky_alu_tb" file="/home/brysonm/dev/skylark/rtl/tb/sky_alu_tb.py" lineno="68" time="2.5987625122070312e-05" sim_time_ns="1000000000" ratio_time="38479853211009.17">
+      <failure message="Test failed with RANDOM_SEED=1744176816" />
+    </testcase>
+    <testcase name="test_alu_shifts" classname="tb.sky_alu_tb" file="/home/brysonm/dev/skylark/rtl/tb/sky_alu_tb.py" lineno="98" time="2.47955322265625e-05" sim_time_ns="1000000000" ratio_time="40329846153846.16">
+      <failure message="Test failed with RANDOM_SEED=1744176816" />
+    </testcase>
+    <testcase name="test_alu_comparisons" classname="tb.sky_alu_tb" file="/home/brysonm/dev/skylark/rtl/tb/sky_alu_tb.py" lineno="134" time="3.0517578125e-05" sim_time_ns="1000000000" ratio_time="32768000000000.0">
+      <failure message="Test failed with RANDOM_SEED=1744176816" />
+    </testcase>
+    <testcase name="test_alu_multiplication" classname="tb.sky_alu_tb" file="/home/brysonm/dev/skylark/rtl/tb/sky_alu_tb.py" lineno="177" time="2.288818359375e-05" sim_time_ns="1000000000" ratio_time="43690666666666.664">
+      <failure message="Test failed with RANDOM_SEED=1744176816" />
+    </testcase>
+    <testcase name="test_alu_overflow" classname="tb.sky_alu_tb" file="/home/brysonm/dev/skylark/rtl/tb/sky_alu_tb.py" lineno="195" time="2.3126602172851562e-05" sim_time_ns="1000000000" ratio_time="43240247422680.414">
+      <failure message="Test failed with RANDOM_SEED=1744176816" />
+    </testcase>
+    <testcase name="test_alu_zero_flag" classname="tb.sky_alu_tb" file="/home/brysonm/dev/skylark/rtl/tb/sky_alu_tb.py" lineno="237" time="2.288818359375e-05" sim_time_ns="1000000000" ratio_time="43690666666666.664">
+      <failure message="Test failed with RANDOM_SEED=1744176816" />
+    </testcase>
+    <testcase name="test_alu_random_operations" classname="tb.sky_alu_tb" file="/home/brysonm/dev/skylark/rtl/tb/sky_alu_tb.py" lineno="268" time="2.3365020751953125e-05" sim_time_ns="1000000000" ratio_time="42799020408163.266">
+      <failure message="Test failed with RANDOM_SEED=1744176816" />
+    </testcase>
+  </testsuite>
+</testsuites>
