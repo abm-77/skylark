@@ -1,16 +1,11 @@
+# Skylark - a mini-accelerator
+Skylark is a WIP project I am starting focused on creating a very simple accelerator chip (in the vein of [tiny-gpu](https://github.com/adam-maj/tiny-gpu))
+along with a compiler + language for this chip. Currently fleshing out the design of the chip in Verilog using the [cocotb](https://www.cocotb.org/) framework
+for testing. The compiler will most likely be written in C++ or Rust. Stay tuned!
 
 
-## ISA  
-
-### Opcodes
-- ADD:  0000
-- SUB:  0001
-- AND:  0010
-- OR:   0011
-- XOR:  0100 
-- SLL:  0101 // shift left logical
-- SRL:  0110 // shift right logical
-- SRA:  0111 // shift right arithmetic
-- SLT:  1000 // set less than
-- SLTU: 1001 // set less than (unsigned)
-- MUL:  1010 // multiply (lower 32-bits)
+## Naming
+As with most of my new projects, it has a punny name. This one is a reference to 
+[Chippington Charles Henry Icarus Finneas "Chip" Skylark III](https://fairlyoddparents.fandom.com/wiki/Chip_Skylark). Intel also has,
+the Skylake series of CPU that always made me think of Chip Skylark. Thus, the 
+name was born.

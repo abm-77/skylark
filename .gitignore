@@ -1,0 +1,8 @@
+./rtl/sim_build/
+./rtl/results.xml
+./rtl/.pytest_cache
+./.venv/
+./rtl/tb/__pycache__/
+./rtl/sim_build/
+./sim_build/
+./rtl/results.xml
