@@ -20,7 +20,7 @@ OP_SLTU = 9
 OP_MUL  = 10
 
 async def reset_dut(dut):
-    """reset the DUT"""
+    """Reset the DUT"""
     dut.reset.value = 1
     await RisingEdge(dut.clk)
     await RisingEdge(dut.clk)
@@ -29,7 +29,7 @@ async def reset_dut(dut):
 
 @cocotb.test
 async def test_alu_addition(dut: ModifiableObject):
-    """test ALU addition op"""
+    """Test ALU addition op"""
     cocotb.start_soon(Clock(dut.clk, 10, units="ns").start())
     await reset_dut(dut)
 
@@ -48,7 +48,7 @@ async def test_alu_addition(dut: ModifiableObject):
 
 @cocotb.test
 async def test_alu_subtraction(dut):
-    """test ALU subtraction op"""
+    """Test ALU subtraction op"""
     cocotb.start_soon(Clock(dut.clk, 10, units="ns").start())
     await reset_dut(dut)
 
@@ -268,7 +268,6 @@ async def test_alu_random_operations(dut):
     cocotb.start_soon(Clock(dut.clk, 10, units="ns").start())
     await reset_dut(dut)
     
-    # Define a function to compute expected results
     def compute_expected(a, b, op):
         if op == OP_ADD:
             return (a + b) & 0xFFFFFFFF
@@ -281,11 +280,10 @@ async def test_alu_random_operations(dut):
         elif op == OP_XOR:
             return a ^ b
         elif op == OP_SLL:
-            return (a << (b & 0x1F)) & 0xFFFFFFFF  # Only use bottom 5 bits for shift
+            return (a << (b & 0x1F)) & 0xFFFFFFFF
         elif op == OP_SRL:
             return (a >> (b & 0x1F)) & 0xFFFFFFFF
         elif op == OP_SRA:
-            # Python's >> is arithmetic on signed values
             shift = b & 0x1F
             sign_bit = (a >> 31) & 1
             if sign_bit:
@@ -304,11 +302,10 @@ async def test_alu_random_operations(dut):
         else:
             return 0
     
-    # Test with 20 random cases
     for _ in range(20):
         a = random.randint(0, 0xFFFFFFFF)
         b = random.randint(0, 0xFFFFFFFF)
-        op = random.randint(0, 10)  # Random operation
+        op = random.randint(0, 10)
         expected = compute_expected(a, b, op)
         
         dut.operand_a.value = a

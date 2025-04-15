@@ -86,7 +86,7 @@ async def test_zero_register(dut):
     dut.read_addr1.value = 0
     await Timer(1, units="ns")
 
-    assert dut.read_data1.value == 0, f"register 0's value has been overwritten with {int(dut.read_data1.value)}"
+    assert dut.read_data1.value == 0, f"Register 0's value has been overwritten with {int(dut.read_data1.value)}"
 
 @cocotb.test
 async def test_simultaneous_reads(dut: ModifiableObject) -> None:

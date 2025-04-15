@@ -5,12 +5,12 @@ module sky_fetch_stage(
   input wire [31:0] branch_target,
   input wire branch_taken,
   output reg [31:0] pc_out,
-  output reg [31:0] instruction,
+  output reg [31:0] instruction
 );
 
 reg [31:0] pc;
 
-reg [31:0] instr_mem[0:1023]
+reg [31:0] instr_mem[0:1023];
 
 always @(posedge clk or posedge reset) begin
   if (reset) pc <= 32'h0;

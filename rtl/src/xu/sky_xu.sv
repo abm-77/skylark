@@ -191,8 +191,6 @@ sky_alu alu(
   .overflow_flag(alu_overflow_flag)
 );
 
-// Memory module would be instantiated here
-// For simplicity, assuming a synchronous memory with read and write ports
 sky_data_memory data_mem(
   .clk(clk),
   .reset(reset),
