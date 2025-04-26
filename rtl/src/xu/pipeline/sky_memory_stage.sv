@@ -24,7 +24,7 @@ module sky_memory_stage(
   output reg [31:0] mem_data,
   output reg [3:0] wb_rd_addr_out,
   output reg wb_reg_write_out,
-  output reg wb_from_mem,
+  output reg wb_from_mem
 );
 
 // memory control signals
@@ -43,9 +43,9 @@ always @(posedge clk or posedge reset) begin
   end else if (!stall) begin
     result_out <= result_in;
     mem_data <= mem_read_data;
-    wb_rd_addr_out <= wb_rd_addr_in,
-    wb_reg_write_out <= wb_reg_write_in,
-    wb_from_mem <= wb_mem_read,
+    wb_rd_addr_out <= wb_rd_addr_in;
+    wb_reg_write_out <= wb_reg_write_in;
+    wb_from_mem <= wb_mem_read;
   end
 end
 

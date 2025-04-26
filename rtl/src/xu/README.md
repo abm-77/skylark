@@ -25,6 +25,11 @@ The opcodes can be translated to:
 The decode stage also checks to see if data will be forwarded from the writeback stage for use in the 
 current instruction. 
 
-# Execute Stage
+## Execute Stage
 The execute stage simply forwards decoded instructions to the ALU and any results that need to be written to memory 
 to the memory stage.
+
+## Memory Stage
+The memory stage will handle dispatching reads/writes to the connected memory unit and writes to the register file.
+
+

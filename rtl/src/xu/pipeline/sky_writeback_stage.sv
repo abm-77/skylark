@@ -6,7 +6,7 @@ module(
   input wire wb_reg_write,
   input wire wb_from_mem,
 
-  // egister file interface
+  // register file interface
   output wire rf_write_enable,
   output wire [3:0] rf_write_addr,
   output wire [31:0] rf_write_data
