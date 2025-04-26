@@ -32,4 +32,7 @@ to the memory stage.
 ## Memory Stage
 The memory stage will handle dispatching reads/writes to the connected memory unit and writes to the register file.
 
+## Writeback Stage
+The writeback stage handles writing data either from memory or the ALU to the register file.
+
 

@@ -1,4 +1,4 @@
-module(
+module sky_writeback_stage (
   // inputs from memory stage
   input wire [31:0] result_in,
   input wire [31:0] mem_data,
