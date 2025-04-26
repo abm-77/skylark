@@ -1,4 +1,4 @@
-module(
+module sky_execute_stage(
   input wire clk,
   input wire reset,
   input wire stall,

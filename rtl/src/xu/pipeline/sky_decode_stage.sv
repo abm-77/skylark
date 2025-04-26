@@ -36,7 +36,7 @@ wire [3:0] rs1 = instruction[27:24];
 wire [3:0] rs2 = instruction[23:20];
 wire [3:0] rd = instruction[19:16];
 wire [3:0] funct = instruction[15:12];
-wire [15:0] funct = instruction[15:0];
+wire [11:0] imm = instruction[11:0];
 
 // control signals
 reg [3:0] alu_op_d;
@@ -54,7 +54,7 @@ always @(*) begin
   alu_op_d = 4'b0000;
   mem_read_d = 1'b0;
   mem_write_d = 1'b0;
-  reg_read_d = 1'b0;
+  reg_write_d = 1'b0;
   use_imm = 1'b0;
 
   case (opcode)
@@ -110,7 +110,7 @@ always @(posedge clk or posedge reset) begin
     // second operand can be either register or immediate
     if (use_imm) begin
       // sign-extend immediate
-      operand_b <= {{16{imm[15]}}, imm};
+      operand_b <= {{20{imm[11]}}, imm};
     end else if (wb_reg_write && wb_write_addr == rs2 && rs2 != 4'h0) begin
       operand_b <= wb_write_data;
     end else begin
